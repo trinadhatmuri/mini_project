@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:medic/screens/reports/addreport.dart';
 import 'package:medic/screens/reports/editreport.dart';
+import 'package:medic/screens/reports/uploadReports.dart';
 
 class Reports extends StatelessWidget {
   final String uid;
@@ -15,6 +16,15 @@ class Reports extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title: Text('Reports'),
+          actions: [
+            RaisedButton(
+                color: Colors.blue,
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (_) => uploadReport()));
+                },
+                child: Text('Attach'))
+          ],
         ),
         floatingActionButton: FloatingActionButton(
           child: Icon(Icons.add),

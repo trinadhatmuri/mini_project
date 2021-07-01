@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:medic/screens/home/doctorInfo.dart';
 import 'package:medic/screens/home/patientInfo.dart';
-import 'package:medic/screens/home/upload.dart';
 
 String uploadFolderName = '';
 

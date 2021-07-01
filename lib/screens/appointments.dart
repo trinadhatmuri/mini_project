@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:medic/screens/authenticate/dermatologists.dart';
+import 'package:medic/screens/dummy.dart';
 
 class Appointments extends StatefulWidget {
   @override
@@ -26,226 +28,126 @@ class _AppointmentsState extends State<Appointments> {
           ),
         ],
       ),
-      body: Center(
-        child: GridView.extent(
-          primary: false,
-          padding: const EdgeInsets.all(16),
-          crossAxisSpacing: 10,
-          mainAxisSpacing: 10,
-          maxCrossAxisExtent: 200.0,
-          children: <Widget>[
-            Container(
-              width: 100.00,
-              height: 150.00,
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                    colors: [Colors.greenAccent, Colors.lightBlueAccent]),
-              ),
-              child: Center(
-                child: Column(
-                  // add Column
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Welcome',
-                        style: TextStyle(
-                            // your text
-                            fontSize: 25.0,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.pinkAccent)),
-                    FlatButton(
-                      onPressed: () {},
-                      child: Text('Button'),
-                    ), // your button beneath text
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
+      body: ListView(
+        children: <Widget>[
+          ListTile(
+            title: Text('dermatologist'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => Dermatologists(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('ENT'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('dentist'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('Cardiologist'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('Audiologist'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('Gynaecologist'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('Orthopaedic surgeon'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('Pulmonologist'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+          ListTile(
+            title: Text('Endocrinologist'),
+            trailing: IconButton(
+                icon: Icon(Icons.arrow_forward),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BookingPage(),
+                    ),
+                  );
+                }),
+          ),
+        ],
       ),
     );
   }

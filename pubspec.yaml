@@ -35,6 +35,8 @@ dependencies:
   image_picker:
   firebase_storage:
   permission_handler:
+  url_launcher:
+  file_picker: 1.4.3+1
 
 
 dev_dependencies:

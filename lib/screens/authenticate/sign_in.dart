@@ -25,7 +25,7 @@ class _SignInState extends State<SignIn> {
       appBar: AppBar(
         backgroundColor: Colors.black45,
         elevation: 0.0,
-        title: Text('Sign in to FitRich'),
+        title: Text('Sign in to Medic'),
         actions: <Widget>[
           FlatButton.icon(
             icon: Icon(Icons.person),

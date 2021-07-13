@@ -92,7 +92,7 @@ class _docProfileState extends State<docProfile> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: (builder) => BookingScreen(
+                          builder: (context) => BookingScreen(
                               doctor: widget.refDoc.data['fullName'])));
                 },
                 child: Text('Book')),

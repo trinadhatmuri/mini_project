@@ -1,11 +1,11 @@
 import 'dart:ffi';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:medic/appointmentsdata.dart';
+import 'package:medic/myAppointmentsList.dart';
+import 'package:medic/screens/myAppointments.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter/material.dart';
-import 'package:medic/screens/appointments.dart';
 import 'package:medic/screens/home/profile.dart';
 import 'package:medic/screens/reports/reports.dart';
 import 'package:medic/services/auth.dart';
@@ -14,8 +14,8 @@ String uid;
 
 class NavBar extends StatelessWidget {
   final AuthService _auth = AuthService();
-
-  final ref = Firestore.instance.collection('$uploadFolderName');
+  final Profile profile = Profile();
+  //final ref = Firestore.instance.collection('$uploadFolderName');
 
   static const url = 'https://symptomate.com/diagnosis';
   Future<Void> _launcher() async {
@@ -34,9 +34,10 @@ class NavBar extends StatelessWidget {
       String imageName;
       final FirebaseAuth auth = FirebaseAuth.instance;
       final FirebaseUser user = await auth.currentUser();
-      final uid = user.uid.toString();
+      final uid = user.uid;
+      final String uploadFolderName = profile.targetFolder();
 
-      imageName = uploadFolderName + '/' + uid + '/ProfilePicture';
+      imageName = uploadFolderName + '/' + uid.toString() + '/profilePicture';
 
       Image image;
       await FireStorageService.loadImage(context, imageName).then((value) {
@@ -115,12 +116,19 @@ class NavBar extends StatelessWidget {
             },
           ),
           ListTile(
+              leading: Icon(Icons.time_to_leave),
+              title: Text('My Appointments'),
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MyAppointments()));
+              }),
+          ListTile(
             leading: Icon(Icons.logout),
             title: Text('logout'),
             onTap: () {
               _auth.signOut();
             },
-          )
+          ),
         ],
       ),
     );

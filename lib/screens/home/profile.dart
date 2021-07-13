@@ -1,15 +1,16 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:medic/screens/home/doctorInfo.dart';
 import 'package:medic/screens/home/patientInfo.dart';
+import 'package:medic/services/auth.dart';
 
-String uploadFolderName = '';
+class Profile extends StatelessWidget {
+  AuthService auth = AuthService();
+  String uploadFolderName = '';
+  String targetFolder() {
+    return uploadFolderName;
+  }
 
-class Profile extends StatefulWidget {
-  @override
-  _ProfileState createState() => _ProfileState();
-}
-
-class _ProfileState extends State<Profile> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,7 +37,12 @@ class _ProfileState extends State<Profile> {
                 children: [
                   SizedBox(width: 50),
                   FlatButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        final uid = await auth.getcurrentUID();
+                        await Firestore.instance
+                            .collection('Doctors')
+                            .document(uid)
+                            .updateData({"uploadFolderName": "Doctors"});
                         uploadFolderName = 'Doctors';
                         Navigator.push(
                             context,
@@ -46,7 +52,12 @@ class _ProfileState extends State<Profile> {
                       child: Text('Doctor')),
                   SizedBox(width: 20),
                   FlatButton(
-                      onPressed: () {
+                      onPressed: () async {
+                        final uid = await auth.getcurrentUID();
+                        await Firestore.instance
+                            .collection('Patients')
+                            .document(uid)
+                            .updateData({"uploadFolderName": "Patients"});
                         uploadFolderName = 'Patients';
                         Navigator.push(
                             context,

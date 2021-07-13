@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:medic/doctorProfile.dart';
 
 class doctorsData extends StatefulWidget {
   @override
@@ -25,7 +26,13 @@ class _doctorsDataState extends State<doctorsData> {
             itemCount: snapshot.hasData ? snapshot.data.documents.length : 0,
             itemBuilder: (_, index) {
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (_) => docProfile(
+                              refDoc: snapshot.data.documents[index])));
+                },
                 child: ProductBox(
                   name: snapshot.data.documents[index].data["fullName"],
                   address: snapshot.data.documents[index].data["address"],

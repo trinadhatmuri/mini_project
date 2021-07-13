@@ -49,7 +49,7 @@ class _uploadImageState extends State<uploadImage> {
     final FirebaseUser user = await _auth.currentUser();
     final uid = user.uid.toString();
 
-    uploadDestination = uploadFolderName + '/' + uid + '/profilePicture';
+    uploadDestination = uid + '/profilePicture';
 
     await Permission.photos.request();
 

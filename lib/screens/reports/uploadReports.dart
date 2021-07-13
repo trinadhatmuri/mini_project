@@ -6,7 +6,6 @@ import 'package:medic/screens/home/profile.dart';
 import 'package:path/path.dart' as p;
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/services.dart';
 import 'dart:io';
 
 class uploadReport extends StatefulWidget {
@@ -38,9 +37,8 @@ class _uploadReportState extends State<uploadReport> {
 
   Future<Void> _uploadFile(File file, String filename) async {
     final FirebaseUser _user = await _auth.currentUser();
-    final uid = _user.uid.toString();
-
-    uploadDestination = uploadFolderName + '/' + uid + '/Reports/' + filename;
+    final uid = _user.uid;
+    uploadDestination = uid.toString() + '/Reports/' + filename;
     StorageReference storageReference;
     storageReference =
         FirebaseStorage.instance.ref().child('$uploadDestination');
